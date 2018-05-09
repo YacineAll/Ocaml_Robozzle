@@ -161,8 +161,8 @@ let dessine_commande (i:int) ((col,e):Programme.commande) : unit =
   set_color black;
   match e with
   | Avancer ->draw_string "==>"
-  | RotGauche->draw_string "(<-)" 
-  | RotDroite->draw_string "(->)"
+  | RotGauche->draw_string "(<)" 
+  | RotDroite->draw_string "(>)"
   | Colorie color->Format.printf "colorier ";(moveto x y );dessine_case_pile (couleur_pile color) i
   | Appel str->draw_string str 
 
